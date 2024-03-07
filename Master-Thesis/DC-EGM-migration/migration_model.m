@@ -1,12 +1,13 @@
-% Matlab class to implement a simple retirement model with consumption and savings,
+% Matlab class to implement a migration model with consumption and savings,
 % income shocks and credit constraint
-% Written by Fedor Iskhakov, Australian National University, 2016
-% See Iskhakov, Jorgensen, Rust and Schjerning 
-% "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
+% Based on the model featured in "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
 %  with (or without) Taste Shocks" (QE, 2017)
+% written by Fedor Iskhakov, Australian National University, 2016
+% See Iskhakov, Jorgensen, Rust and Schjerning 
 
 
-classdef my_model_migration < handle
+
+classdef model_migration < handle
 % This class defines a Deaton consumption-savings model
 
 properties (Access=public)
