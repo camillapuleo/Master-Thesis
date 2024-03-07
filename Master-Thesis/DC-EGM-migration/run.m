@@ -1,6 +1,9 @@
 % Run script to demonstrate the properties of models with consumption and savings
 % as well as polyline class. To be used as starting point for working with this models code.
-% Written by Fedor Iskhakov, Australian National University, 2016
+% Based on the model featured in "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
+%  with (or without) Taste Shocks" (QE, 2017)
+% written by Fedor Iskhakov, Australian National University, 2016
+% See Iskhakov, Jorgensen, Rust and Schjerning 
 
 close all
 clear
