@@ -1,6 +1,8 @@
-% Run script to demonstrate the properties of models with consumption and savings
-% as well as polyline class. To be used as starting point for working with this models code.
+% Created following:
+% "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
+%  with (or without) Taste Shocks" (QE, 2017)
 % Written by Fedor Iskhakov, Australian National University, 2016
+% See Iskhakov, Jorgensen, Rust and Schjerning 
 
 close all
 clear
@@ -10,7 +12,7 @@ addpath('utils');
 
 
 %% Simulation High Skilled
-m5=my_model_migration
+m5=model_migration
 m5.ngridm=500;
 m5.df=1/(1+m5.r); %flat consumption hopefully
 m5.sigma=0.25;
@@ -33,7 +35,7 @@ fprintf('Simulation plots for migration model produced\n')
 
 
 %% Simulation Low Skilled
-m6=my_model_migration
+m6=model_migration
 m6.ngridm=500;
 m6.df=1/(1+m6.r); %flat consumption hopefully
 m6.sigma=0.25;
@@ -153,23 +155,6 @@ legend('High education', 'Low education');
 % Release hold
 hold off;
 
-
-%% Government expenditure
-%
-% Columns you want to count NaN values in
-%columns_to_count = [47:62];
-%
-% Count NaN values in the specified columns
-%Nret_high = sum(~isnan(m5.sims.decision(:, columns_to_count)), 1);
-%Nret_low = sum(~isnan(m6.sims.decision(:, columns_to_count)), 1);
-%
-%
-%
-%
-%plot(Probabilitytoleavehigh(:,1));
-%
-%Prob_low = readtable("probability_to_leave_low.xls");
-%Prob_low = readtable("probability_to_leave_high.xls");
 
 
 %% Plot consumption paths
@@ -328,7 +313,7 @@ disp(fval);
 
 
 %% Nice simulation graphics using migration model
-m5=my_model_migration
+m5=model_migration
 m5.ngridm=500;
 m5.df=1/(1+m5.r); %flat consumption hopefully
 m5.sigma=0.25;
@@ -351,7 +336,7 @@ fprintf('Simulation plots for migration model produced\n')
 
 
 %% Nice simulation graphics using migration model
-m6=my_model_migration
+m6=model_migration
 m6.ngridm=500;
 m6.df=1/(1+m6.r); %flat consumption hopefully
 m6.sigma=0.25;
