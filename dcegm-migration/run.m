@@ -1,4 +1,5 @@
-% Created following:
+% Some codes to run the model with different parameters and some plots to visualize the outputs
+%Created following:
 % "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
 %  with (or without) Taste Shocks" (QE, 2017)
 % Written by Fedor Iskhakov, Australian National University, 2016
