@@ -1,3 +1,4 @@
+% Life cycle model of consumption decisions and migration choices
 % Model created following:
 % "The Endogenous Grid Method for Discrete-Continuous Dynamic Choice Models 
 %  with (or without) Taste Shocks" (QE, 2017)
@@ -13,7 +14,7 @@ properties (Access=public)
 	label		= 'Consumption model with migration decisions'; %name of this model
 	Tbar		= 62			; %number of periods (fist period is t=1) 
 	ngridm	= 500		; %number of grid points over assets
-	mmax		= 1000000000000		; %maximum level of assets
+	mmax		= 100000		; %maximum level of assets
 	expn		=	5 		; %number of quadrature points used in calculation of expectations
 	nsims		= 1000		; %number of simulations
 	init    =[10 30] ; %interval of the initial wealth
@@ -57,7 +58,7 @@ methods (Access=public)
 		else
 			u=(consumption.^(1-me.theta)-1)/(1-me.theta);
 		end
-		%u=u + mutility(me,it)*(choice==2);
+		
         u=u - me.dus*(choice==1);
 	end %util
 	function mu=mutil(me,consumption) %marginal utility
