@@ -1,3 +1,5 @@
+% Function to compute the distance between model output probabilities of emigration and real data emigration
+
 function distance = prob_distance(x, pr,edu)
        model =my_model_migration; 
        model.dus=x(1);
